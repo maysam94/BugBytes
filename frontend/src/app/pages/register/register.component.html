@@ -1,0 +1,67 @@
+<app-popup [popUpMessage]="popUpMessage"></app-popup>
+<section class="registerForm">
+    <form [formGroup]="registerForm" #createUser="ngForm" (ngSubmit)="onSubmit(createUser.value)">
+        <section class="bla">
+            <section>
+                <label for="firstName" class="firstNameLabel">First Name</label>
+                <input
+                    type="text"
+                    formControlName="firstName"
+                    placeholder="First Name"
+                    class="firstName"
+                    name="firstName"
+                />
+                <p *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+                    Please Enter a Valid First Name
+                </p>
+            </section>
+            <section>
+                <label for="prefix" class="prefixLabel">Prefixes</label>
+                <input type="text" formControlName="prefixes" placeholder="Prefix" name="prefix" class="prefixes" />
+            </section>
+        </section>
+        <section class="LastName">
+            <label for="lastName">Last Name</label>
+            <input type="text" formControlName="lastName" name="lastName" placeholder="Last Name" />
+            <p *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')!.touched">
+                Please Enter a Valid Last Name
+            </p>
+        </section>
+        <section class="email">
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" name="email" placeholder="Email" />
+            <p *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+                Please Enter a Valid Email
+            </p>
+        </section>
+        <section class="password">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" #passswordInput name="password" placeholder="Password" />
+            <p [ngClass]="passswordInput.value.length >= 8 ? 'green' : 'red'">Must be at least 8 characters!</p>
+            <p [ngClass]="passswordInput.value.match(passwordContainsOneNumber) ? 'green' : 'red'">
+                Must contain at least 1 number!
+            </p>
+            <p [ngClass]="passswordInput.value.match(passwordContainsCapitalCase) ? 'green' : 'red'">
+                Must contain at least 1 capital case
+            </p>
+            <p [ngClass]="passswordInput.value.match(passwordContainsLowerCase) ? 'green' : 'red'">
+                Must contain at least 1 lower case
+            </p>
+            <p [ngClass]="passswordInput.value.match(passwordContainsSpecialCharacter) ? 'green' : 'red'">
+                Must contain at least 1 special character
+            </p>
+        </section>
+        <section>
+            <select formControlName="areaOfExpertiseId" name="areaOfExpertise">
+                <option selected value="null">Select Your Area of Expertise</option>
+                <option *ngFor="let area of areaOfExpertise" [id]="area.id" [ngValue]="area.id">
+                    {{ area.areaOfExpertiseName }}
+                </option>
+            </select>
+            <p *ngIf="!registerForm.get('areaOfExpertiseId')?.valid && registerForm.get('areaOfExpertiseId')?.touched">
+                Please Select Your Area of Expertise
+            </p>
+        </section>
+        <button type="submit">Register</button>
+    </form>
+</section>

@@ -1,0 +1,14 @@
+<h1 id="error-handler"></h1>
+<section class="main">
+    <section class="upper-section">
+        <section class="page-title"><h1>Achievements</h1></section>
+        <section class="account-progress-box">
+            <section class="user-overview">
+                <section class="user-picture"></section>
+                <section class="user-information">Level 1: Activist</section>
+            </section>
+            <progress value="10" max="100" class="progress-bar"></progress>
+        </section>
+    </section>
+    <section class="lower-section"><app-achievement-item *ngFor="let achievement of achievements" [achievementInformation]="achievement"></app-achievement-item></section>
+</section>

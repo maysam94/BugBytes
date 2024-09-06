@@ -1,0 +1,29 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+  <section>
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      name="login"
+      id="email"
+      placeholder="info@example.com"
+      formControlName="email"
+    />
+    <p *ngIf="loginForm.get('email')?.invalid && loginForm.touched">
+      Please enter a valid email
+    </p>
+  </section>
+  <section>
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      name="login"
+      id="password"
+      formControlName="password"
+    />
+    <p *ngIf="loginForm.get('password')?.invalid && loginForm.touched">
+      Please enter a password
+    </p>
+  </section>
+  <button type="submit">Login</button>
+</form>
+<app-popup [popUpMessage]="popUpMessage"></app-popup>

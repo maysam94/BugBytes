@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.projectPlaceholder {
+    background-color: #bbb;
+    height: 7rem;
+    width: 45rem;
+    border-radius: 1rem;
+    display: inline-block;
+    position: absolute;
+    left: 23rem;
+    top: 21rem;
+}
+
+@media screen and (max-width: 800px) {
+    .projectPlaceholder {
+        position: relative;
+        left: -6.7rem;
+        top: -9rem;
+        max-width: 45%;
+    }
+}

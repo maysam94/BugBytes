@@ -1,0 +1,105 @@
+<app-popup [popUpMessage]="popUpMessage"></app-popup>
+<section class="editProfile">
+    <form [formGroup]="myEditForm" class="editForm" #editForm="ngForm" (ngSubmit)="onSubmit(editForm.value)">
+        <section class="firstNameSection" *ngIf="myProfileSavedDetails">
+            <label for="firstName" class="firstNameLabel">First Name</label>
+            <input
+                type="text"
+                formControlName="firstName"
+                placeholder="First Name"
+                class="firstNameInput"
+                name="firstName"
+            />
+        </section>
+        <p
+            class="firstNameInvalid"
+            *ngIf="myEditForm.get('firstName')?.invalid && myEditForm.get('firstName')?.touched"
+        >
+            At least 2 characters and max 255 characters
+        </p>
+
+        <p class="firstNameValid" *ngIf="myEditForm.get('firstName')?.valid && myEditForm.get('firstName')?.touched">
+            First Name is Valid
+        </p>
+        <section class="prefixes">
+            <label for="prefixes" class="prefixesLabel">Prefixes</label>
+            <input
+                type="text"
+                placeholder="Prefixes"
+                class="prefixesInput"
+                name="prefixes"
+                formControlName="prefixes"
+            />
+        </section>
+        <p class="prefixesInvalid" *ngIf="myEditForm.get('prefixes')?.invalid && myEditForm.get('prefixes')?.touched">
+            prefixes can't be more than 20 characters
+        </p>
+        <p class="prefixesValid" *ngIf="myEditForm.get('prefixes')?.valid && myEditForm.get('prefixes')?.touched">
+            prefixes is Valid
+        </p>
+        <section class="lastNameSection">
+            <label for="lastName" class="lastNameLabel">Last Name</label>
+            <input
+                type="text"
+                placeholder="Last Name"
+                class="lastNameInput"
+                name="lastName"
+                formControlName="lastName"
+            />
+        </section>
+        <p class="lastNameInvalid" *ngIf="myEditForm.get('lastName')?.invalid && myEditForm.get('lastName')?.touched">
+            last name At least 2 characters and max 255 characters
+        </p>
+        <p class="lastNameValid" *ngIf="myEditForm.get('lastName')?.valid && myEditForm.get('lastName')?.touched">
+            Last Name is Valid
+        </p>
+        <section class="emailSection">
+            <label for="email" class="emailLabel">Email</label>
+            <input type="email" placeholder="Email" class="emailInput" name="email" formControlName="email" />
+        </section>
+        <p class="emailInvalid" *ngIf="myEditForm.get('email')?.invalid && myEditForm.get('email')?.touched">
+            Please Enter a Valid Email
+        </p>
+        <p class="emailValid" *ngIf="myEditForm.get('email')?.valid && myEditForm.get('email')?.touched">
+            Email is Valid
+        </p>
+        <section class="description">
+            <label for="description" class="descriptionLabel">Description</label>
+            <textarea
+                class="descriptionTextArea"
+                cols="83"
+                rows="10"
+                name="description"
+                formControlName="description"
+            ></textarea>
+        </section>
+        <p
+            class="descriptionInvalid"
+            *ngIf="myEditForm.get('description')?.invalid && myEditForm.get('description')?.touched"
+        >
+            Description can't be more than 500 characters
+        </p>
+        <p
+            class="descriptionValid"
+            *ngIf="myEditForm.get('description')?.valid && myEditForm.get('description')?.touched"
+        >
+            Description is Valid
+        </p>
+        <!-- <section> -->
+        <p
+            class="areaOfExpertiseSelected"
+            *ngIf="myEditForm.get('areaOfExpertiseId')?.valid && myEditForm.get('areaOfExpertiseId')?.touched"
+        >
+            Area of Expertise has been selected
+        </p>
+        <label for="areaOfExpertise" class="areaOfExpertiseLabel">Area of Expertise</label>
+        <select formControlName="areaOfExpertiseId" name="areaOfExpertiseId" class="areaOfExpertise">
+            <option selected value="null">Select Your Area of Expertise</option>
+            <option *ngFor="let area of areaOfExpertise" [id]="area.id" [ngValue]="area.id">
+                {{ area.areaOfExpertiseName }}
+            </option>
+        </select>
+        <!-- </section> -->
+        <button class="saveButton" type="submit">Save Changes</button>
+    </form>
+</section>

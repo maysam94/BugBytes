@@ -1,0 +1,85 @@
+h1 {
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 2rem;
+    justify-content: center;
+    height: 3rem;
+    border: none;
+    border-radius: 20rem;
+    box-shadow: 0.14rem 0.17rem rgba(0, 0, 0, 0.251);
+    background-color: #5c9262;
+    cursor: pointer;
+    margin: 0;
+}
+
+details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: #5c9262;
+    border-radius: 20rem;
+    box-shadow: 0.14rem 0.17rem rgba(0, 0, 0, 0.251);
+    height: 3rem;
+}
+details[open] {
+    height: 3rem;
+}
+
+img {
+    aspect-ratio: 1/1;
+    height: 1.4rem;
+    border-radius: 100%;
+}
+
+summary {
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    border-radius: 20rem;
+}
+/* summary::marker {
+    content: url(../../../assets/media/simple-triangle-svgrepo-com.svg);
+} */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    background-color: #5c9262;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+section button {
+    background-color: #000;
+}
+
+details:hover,
+details[open] {
+    filter: brightness(0.9);
+    box-shadow: inset 0.14rem 0.17rem rgba(0, 0, 0, 0.351);
+}
+
+button:hover {
+    filter: brightness(0.9);
+    box-shadow: inset 0.14rem 0.17rem rgba(0, 0, 0, 0.351);
+}

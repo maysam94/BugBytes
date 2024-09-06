@@ -1,0 +1,43 @@
+<section class="main-box">
+    <h1>Create group</h1>
+    <form [formGroup]="addGroup" (ngSubmit)="onSubmit()">
+        <section class="group-leftside">
+            <label for="">Search</label>
+            <input type="text" (input)="onSearchbarUpdate($event)" id="searchbar" placeholder="Search student">
+            <span *ngIf="addGroup?.touched && selectedStudents.length === 0" class="validation-message">
+                Select atleast 1 student
+            </span>
+            <label for="groupname">Groupname</label>
+            <input type="text" name="groupname" id="" placeholder="Groupname" class="form-input" formControlName="groupname">
+            <span *ngIf="!addGroup.get('groupname')?.valid && addGroup.get('groupname')?.touched" class="validation-message">
+                Please enter a valid groupname!
+            </span>
+            <button type="submit" id="submit-button">Create</button>
+        </section>
+
+        <!-- Search results -->
+        <section class="group-rightside">
+            <section class="result-header">Search results</section>
+            <section class="studentlist">
+                <section *ngFor="let fakeStudent of searchedStudents" class="student-row">
+                    <input type="checkbox" id="{{fakeStudent.studentID}}" class="student-checkbox" (change)="onCheckChange($event)"
+                     value="{{ fakeStudent.studentID }}" [checked]="checkStudents(fakeStudent.studentID)">
+                    <label for="{{fakeStudent.studentID}}">
+                        {{ fakeStudent.studentFirstName }} {{ fakeStudent.studentLastName }}
+                    </label>
+                </section>  
+            </section>
+        </section>
+
+        <!-- Selected students -->
+        <section class="group-rightside">
+            <section class="result-header">Selected students</section>
+            <section class="studentlist">
+                <section class="student-row" *ngFor="let selectedStudent of selectedStudents">
+                    {{ returnSelectedStudentFullName(selectedStudent) }}
+                </section>
+            </section>
+        </section>
+    </form>
+</section>
+<app-popup [popUpMessage]="popUpMessage"></app-popup>

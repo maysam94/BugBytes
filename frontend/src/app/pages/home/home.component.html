@@ -1,0 +1,19 @@
+<section id="main-box">
+    <section class="left-side">
+    </section>
+    <section class="right-side">
+        <section class="sort-by-box">
+            <section class="sort-by-options">
+                <button class="sort-button">Populair</button>
+                <button class="sort-button">Latest</button>
+                <button class="sort-button">Inspirational</button>
+            </section>
+        </section>
+        <section id="respond-message" *ngIf="errorMessage !== ''"><h1>{{errorMessage}}</h1></section>
+        <section class="content">
+            <app-project-item *ngFor="let project of projects" 
+            [title]="project.title" [description]="project.description"
+            [sdgs]="project.sdgs"></app-project-item>
+        </section>
+    </section>
+</section>

@@ -1,0 +1,32 @@
+<header>
+    <nav>
+        <section id="left-aligning">
+            <a routerLink="">
+                <figure>
+                    <img src="../../assets/media/BugBytes.png" alt="The logo of the site" />
+                    <figcaption>SDG HVA</figcaption>
+                </figure>
+            </a>
+            <a routerLink="#">
+                <button>SDG Info</button>
+            </a>
+        </section>
+        <input type="text" name="searchbar" id="searchbar" />
+        <section class="right-aligning" *ngIf="!userInformation">
+            <a routerLink="register">
+                <button>Register</button>
+            </a>
+            <a routerLink="login">
+                <button>Login</button>
+            </a>
+        </section>
+
+        <section class="right-aligning" *ngIf="userInformation">
+            <img src="../../../assets/media/notification-icon.png" alt="An icon for the notifications" />
+            <a routerLink="dashboard" *ngIf="userInformation?.role === 'admin' || userInformation?.role === 'teacher'">
+                <button>Dashboard</button>
+            </a>
+            <app-navbar-dropdown [name]="userInformation.name"></app-navbar-dropdown>
+        </section>
+    </nav>
+</header>

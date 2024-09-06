@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+.vscode
+=======
+node_modules
+.env
+>>>>>>> 9c6fe00 (kleine fix)

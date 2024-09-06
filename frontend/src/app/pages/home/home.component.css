@@ -1,0 +1,48 @@
+#main-box {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 1.6rem;
+}
+#respond-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+#respond-message h1 {
+    color: rgb(72, 72, 72);
+    padding: 10px;
+    font-weight: 1000;
+    margin: 0;
+}   
+.sort-by-box {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: flex-end;
+}
+.sort-by-options {
+    border-radius: 10px;
+    border: 1.5px solid rgba(69, 69, 69, 0.597);
+}
+.sort-button {
+    border: none;
+    margin: 2px;
+    padding: 5px 18px;
+    background-color: transparent;
+}
+.sort-button:not(:first-child, :last-child) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.sort-button:hover {
+    cursor: pointer;
+    background-color: rgba(95, 95, 95, 0.37);
+}
+.left-side {
+    width: 250px;
+}
+.right-side {
+    margin: 50px 100px 10px 100px;
+    width: 100%;
+}

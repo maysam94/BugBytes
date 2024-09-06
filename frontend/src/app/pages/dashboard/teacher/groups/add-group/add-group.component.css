@@ -1,0 +1,125 @@
+.group-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.group-box {
+    display: flex;
+    justify-content: center;
+}
+
+.group-wrapper {
+    padding: 30px 70px;
+    border-radius: 10px;
+    border: 1px solid rgba(112, 112, 112, 0.845);
+
+}
+
+.studentlist {
+    margin-top: 30px;
+    height: 200px;
+    width: 100%;
+    overflow: auto;
+}
+.student-row {
+    display: flex;
+    padding: 10px 0px;
+    width: 100%;
+    border-bottom: 1px solid rgba(138, 138, 138, 0.445);
+}
+
+.search-body {
+    width: 250px;
+    display: flex;
+}
+
+.student-checkbox {
+    background-color: green;
+    cursor: pointer;
+}
+
+.student-checkbox:checked + label::after {
+    content: "✓";
+}
+
+.main-box {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+}
+
+.group-leftside {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    width: 170px;
+}
+
+.group-rightside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+input {
+    font-size: 1rem;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 1rem;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+}
+
+#submit-button {
+    font-size: 1rem;
+    color: #fff;
+    justify-content: center;
+    height: 1.8rem;
+    width: 170px;
+    min-width: 10rem;
+    border: none;
+    border-radius: 20rem;
+    box-shadow: 0.14rem 0.17rem rgba(0, 0, 0, 0.251);
+    background-color: #32a63e;
+    cursor: pointer;
+}
+#submit-button:hover {
+    background-color: #70b677;
+}
+.result-header {
+    background-color: rgb(36, 169, 36);
+    color: white;
+    padding: 10px;
+    width: 80%;
+    border-radius: 20rem;
+}
+#searchbar {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.462);
+    padding: 5px 10px;
+}
+.validation-message {
+    color: red;
+}
+.form-input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+app-popup {
+    position: fixed;
+    top: 5rem;
+    left: 50%;
+    translate: -50% 0;
+  }

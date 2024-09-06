@@ -1,0 +1,69 @@
+.main {
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    border-radius: 20px;
+    border: 1px solid rgba(105, 104, 104, 0.407);
+    margin-bottom: 15px;
+}
+.title {
+    font-size: 1.3rem;
+    max-width: 600px;
+    white-space: wrap;
+    overflow: hidden;
+}
+#vertical-split {
+    margin: 0;
+    border-left: 1px solid rgba(105, 104, 104, 0.407);
+}
+.description {
+    font-size: 1rem;
+    padding-top: 20px;
+    color: rgb(74, 74, 74);
+    max-width: 450px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.left-content-box {
+    min-width: 60%;
+    max-width: 60%;
+    padding: 20px 15px;
+}
+.right-content-box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2px 15px;
+}
+.compliment-label {
+    padding: 3px 9px;
+    border-radius: 20px;
+    background-color: rgba(0, 215, 0, 0.653);
+    color: white;
+}
+.compliments {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid rgba(105, 104, 104, 0.407);;
+    padding-top: 10px;
+}
+.labels {
+    display: flex;
+    overflow: hidden;
+    max-height: 100px;
+    flex-wrap: wrap;
+}
+#show-more {
+    width: 85px;
+    width: 100%;
+    background-color: transparent;
+    justify-content: flex-end;
+    border: none;
+    justify-content: flex-end;
+    color: blue;
+    cursor: pointer;
+}

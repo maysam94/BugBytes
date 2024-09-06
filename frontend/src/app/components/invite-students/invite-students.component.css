@@ -1,0 +1,58 @@
+body{
+    height: 460px;
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+input{
+    width: 90%;
+    border: 1px gray solid;
+    border-radius: 16px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 2px;
+    margin-right: 1%;
+    float: right;
+}
+
+.student-section{
+    height: 390px;
+    width: 45%;
+    display: inline-block;
+    margin-left: 4%;
+    margin-top: 20px;
+}
+
+.result-header{
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 16px;
+}
+
+.student-list{
+    height: 350px;
+    overflow: auto;    
+}
+
+.student-row {
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(138, 138, 138, 0.445);
+    text-align: left;
+    font-size: 1rem;
+}
+
+.student-checkbox {
+    height: auto;
+    width: auto;
+    margin: 2px 5px;
+    cursor: pointer;
+    float: left;
+}
+
+p{
+    margin: 1px 5px;
+    font-size: 1rem;
+}

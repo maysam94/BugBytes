@@ -1,0 +1,13 @@
+stages:
+    - test
+
+lint:
+    image: node:16
+    tags:
+        - hva
+    stage: test
+    script:
+    
+        - cd bug-bytes
+        - npm install
+        - npm run check

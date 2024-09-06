@@ -1,0 +1,102 @@
+<section id="page-container">
+    <h1>Create a new project</h1>
+    <form id="new-project-form" #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+        <section id="new-project-container">
+            <section id="general-info-input">
+
+                <!-- Title and description section -->
+
+                <section id="title-description-section" class="container-part">
+                    <section id="title-section">
+                        <label for="title-input">Title</label>
+                        <input type="text" id="title-input" name="titleInput" minlength="5" maxlength="125"
+                            placeholder="Add a title between 5 and 255 characters" [class.invalid-input-field]="titleImputField.invalid &&
+                            titleImputField.touched" (input)="onUpdateTitle($event)"
+                            #titleImputField="ngModel" required ngModel />
+                        <p class="invalid-input-paragraph" *ngIf="
+                                (titleImputField.invalid &&
+                                    titleImputField.touched) ||
+                                !validTitle
+                            ">
+                            Please enter a title between 5 and 255 characters
+                        </p>
+                    </section>
+                    <section id="description-section">
+                        <label for="description-input" id="description-input-label">Description</label>
+                        <textarea id="description-input" name="descriptionInput" minlength="10" maxlength="5000"
+                            placeholder="Add a description between 10 and 10000 characters" [class.invalid-input-field]="descriptionInputField.invalid &&
+                            descriptionInputField.touched"
+                            (input)="onUpdateDescription($event)" #descriptionInputField="ngModel" required
+                            ngModel></textarea>
+                        <p class="invalid-input-paragraph" *ngIf="
+                                (descriptionInputField.invalid &&
+                                    descriptionInputField.touched) ||
+                                !validDescription
+                            ">
+                            Please enter a description between 10 and 10000
+                            characters
+                        </p>
+                    </section>
+                </section>
+
+                <!-- Images section -->
+
+                <section id="images-section" class="container-part">
+                    <label for="images-input">Images</label>
+                    <section id="image-url-section">
+                        <form id="image-url-form" #imageForm="ngForm" (ngSubmit)="
+                                onSubmitImageUrl(imageForm, imageForm.value, urlInputField)
+                            ">
+                            <input type="text" id="images-input" name="imageUrl" placeholder="Add up to 5 image urls"
+                                #urlInput="ngModel" (input)="onUpdateImageUrl(urlInputField)" required ngModel #urlInputField/>
+                            <button type="submit" id="add-image-button" [disabled]="imageForm.invalid">
+                                Add
+                            </button>
+                            <p class="invalid-input-paragraph-images" *ngIf="!validUrl">
+                                Please enter a valid url
+                            </p>
+                            <p class="invalid-input-paragraph-images" *ngIf="maxImageAmount">
+                                Max 5 images. Please remove an image before
+                                adding one.
+                            </p>
+                        </form>
+                        <section id="images-output-section">
+                            <section class="single-image-output-section" *ngFor="
+                                    let image of projectImageUrls;
+                                    let i = index
+                                ">
+                                <img [src]="image" />
+                                <button type="button" class="delete-image-button" (click)="onRemoveImage(i, urlInputField)">
+                                    X
+                                </button>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+
+                <!-- Invite students section -->
+
+                <section id="invite-section">
+                    <label id="invite-label">Invite Students</label>
+                    <app-invite-students (myEvent)="onUpdateStudentSelect($event)"></app-invite-students>
+                </section>
+
+            </section>
+
+            <!-- SDG select section -->
+
+            <section id="sdg-section">
+                <label id="sdg-input-label">Select one or more SGDs for this project</label>
+                <p class="invalid-input-paragraph-sdg" *ngIf="!validSdgInput">
+                    Please choose one or more SDGs
+                </p>
+                <section id="sdg-image-section">
+                    <img *ngFor="let image of sdgImages; let i = index" [src]="image" [alt]="'SDG ' + (i + 1)"
+                        [id]="i + 1" (click)="onSdgClick($event)" />
+                </section>
+            </section>
+
+        </section>
+        <button type="submit" id="create-button">Create</button>
+    </form>
+</section>

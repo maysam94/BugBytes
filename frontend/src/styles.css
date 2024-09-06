@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+.sdg-1{
+    background-color: #EC1C2D;
+}
+.sdg-2{
+    background-color: #D3A029
+}
+.sdg-3 { 
+    background-color: #00A000;
+}
+.sdg-4 {
+    background-color: #DA0822;
+}
+.sdg-5 {
+    background-color: #FF4000;
+}
+.sdg-6 {
+    background-color: #00AED9;
+}
+.sdg-7 {
+    background-color: #FDBE00;
+}
+.sdg-8 {
+    background-color: #9F0830;
+}
+.sdg-9 {
+    background-color: #FF6919;
+}
+.sdg-10 {
+    background-color: #FF006E;
+}
+.sdg-11 {
+    background-color: #F9B000;
+}
+.sdg-12 {
+    background-color: #F08700;
+}
+.sdg-13 {
+    background-color: #379223;
+}
+.sdg-14 {
+    background-color: #0D81DF;
+}
+.sdg-15 {
+    background-color: #59BA47;
+}
+.sdg-16 {
+    background-color: #136A9F;
+}.sdg-17 {
+    background-color: #14496B;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

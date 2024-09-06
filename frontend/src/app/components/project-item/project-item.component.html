@@ -1,0 +1,17 @@
+<section class="main">
+    <section class="left-content-box">
+        <section class="title">{{title}}</section>
+        <section class="description">{{description}}</section>
+    </section>
+    <hr id="vertical-split">
+    <section class="right-content-box">
+        <section class="labels" #labelsection>
+            <app-sdg *ngFor="let sdg of sdgs" [sdgId]="sdg.sdgId" [sdgName]="sdg.sdgName" [sdgColor]="'sdg-'+ sdg.sdgId"></app-sdg>
+        </section>
+        <button id="show-more" *ngIf="returnTotalSdgs(sdgs) >= 3" (click)="showLabels(labelsection, $event)">Show more</button>
+        <hr id="horizon-split">
+        <section class="compliments">
+            <section class="compliment-label">Creative</section>
+        </section>
+    </section>
+</section>

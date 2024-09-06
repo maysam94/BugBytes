@@ -1,0 +1,27 @@
+<body>
+    <input type="text" (input)="findStudents($event)" #studentFindInput="ngModel" placeholder="Search students" ngModel/>
+
+    <!-- Search results section -->
+
+    <section class="student-section">
+        <section class="result-header"><h3>Search results</h3></section>
+        <section class="student-list">
+            <section *ngFor="let student of searchedStudents" class="student-row">
+                <input type="checkbox" id="{{student.userId}}" class="student-checkbox" (change)="onCheckChange($event)" [checked]="selectedStudents.includes(student)">
+                <label for="{{student.userId}}">{{student.firstName + " " + student.prefixes + " " +student.lastName}}</label>
+            </section>
+            <p *ngIf="studentFindInput.value !== '' && searchedStudents.length === 0">No students found</p>
+        </section>
+    </section>
+
+    <!-- Selected students section -->
+
+    <section class="student-section">
+        <section class="result-header"><h3>Selected students</h3></section>
+        <section class="student-list">
+            <section *ngFor="let student of selectedStudents" class="student-row">
+                <p>{{student.firstName + " " + student.prefixes + " " +student.lastName}}</p>
+            </section>
+        </section>
+    </section>
+</body>

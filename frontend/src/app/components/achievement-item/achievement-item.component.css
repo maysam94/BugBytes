@@ -1,0 +1,35 @@
+.achievement-box {
+    width: 220px;
+    border-radius: 2rem;
+    padding: 10px;
+    margin: 25px;
+}
+.achievement-title {
+    font-size: 2rem;
+    max-width: 200px;
+    line-height: 2rem;
+    text-align: center;
+    margin: 10px auto;
+}
+.achievement-level {
+    margin: 5px 0px;
+}
+.requirement-section {
+    margin: 3px 0px;
+}
+.achievement-image-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.achievement-image {
+    height: 130px;
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-size: cover;
+}
+.explanation-section {
+    text-align: left    ;
+}

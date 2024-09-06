@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+.profilePicture {
+    border-radius: 10rem;
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    top: -7rem;
+    left: 0rem;
+}
+
+.banner {
+    width: 100%;
+    height: 10rem;
+    position: relative;
+}
+
+.editButton {
+    height: 3rem;
+    width: 2rem;
+    cursor: pointer;
+    position: relative;
+    top: -12rem;
+    left: 12rem;
+}
+
+aside {
+    border-right: 3px solid gray;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 6rem;
+    padding: 0 -12rem;
+    height: 70rem;
+}
+
+.profileInformation {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.fullName {
+    display: inline-block;
+    position: relative;
+    top: -7rem;
+    left: -3.5rem;
+    text-align: center;
+}
+
+.description {
+    display: flex;
+    position: absolute;
+    left: 3rem;
+    top: 22rem;
+    max-width: 18%;
+}
+
+.email::before {
+    content: "";
+    background-image: url("https://cdn-icons-png.flaticon.com/512/2989/2989993.png");
+    background-size: cover;
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+    margin-top: -0.5rem;
+}
+
+.emailIcon {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 40px;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 3.5rem;
+    right: 5rem;
+}
+
+/* add project button */
+.addProject {
+    position: relative;
+    bottom: 33rem;
+    left: 48.5rem;
+    background-color: #42db1c;
+    color: #fff;
+    border-radius: 3rem;
+    cursor: pointer;
+    width: 11rem;
+    height: 2rem;
+    transition: 0.5s all;
+    border: none;
+}
+
+.addProject:hover {
+    transform: scale(1.1);
+}
+
+.personalProjectsTitle {
+    font-weight: 900;
+    position: relative;
+    left: 14.5rem;
+    bottom: 30rem;
+    display: flex;
+}
+
+/* .emailDetails {
+    margin-top: 5rem;
+} */
+
+.personalProjects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.projectPlaceholder {
+    background-color: #bbb;
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    left: 10rem;
+    top: 2rem;
+}
+.achievement-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 90px;
+    margin-left: -45px;
+    max-width: 90%;
+}
+.button-styling {
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    background-color: rgb(141, 0, 211);
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+}
+.achievement-image {
+    width: 45px;
+    height: 45px;
+}
+#achievement-logo {
+    padding-left: 3px;
+    width: 15;
+    height: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .description {
+        max-width: 40%;
+        max-height: 100%;
+        position: relative;
+        left: -7rem;
+        top: -11rem;
+    }
+
+    .profilePicture {
+        position: relative;
+        left: -4rem;
+    }
+
+    .achievement-section {
+        position: relative;
+        top: -17rem;
+        left: -2rem;
+        max-width: 32%;
+    }
+
+    #image-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .personalProjectsTitle {
+        position: relative;
+        top: -8rem;
+        left: -24rem;
+    }
+
+    .addProject {
+        position: relative;
+        left: -12.6rem;
+        bottom: 18.5rem;
+        max-width: 15%;
+    }
+
+    aside {
+        display: inline-flex;
+        flex-direction: column;
+        margin: 0 9rem;
+        padding: 0 -12rem;
+        height: 70rem;
+    }
+
+    .fullName {
+        margin-left: -36rem;
+    }
+
+    .editButton {
+        margin-left: -4rem;
+    }
+
+    .email::before {
+        content: "";
+        background-image: url("https://cdn-icons-png.flaticon.com/512/2989/2989993.png");
+        background-size: cover;
+        height: 40px;
+        margin-right: 10px;
+        width: 40px;
+    }
+}

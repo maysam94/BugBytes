@@ -1,0 +1,75 @@
+<section class="container">
+    <h2>Create a new assignment</h2>
+    <form id="new-assignment-form" #assignmentForm="ngForm" (ngSubmit)="createAssignmentOpject()">
+        <section id="new-assignment-container">
+            <section id="general-info-input">
+
+                <section id="title-description-section" class="container-part">
+                    <section id="title-section">
+                        <label for="title-input">Title</label>
+                        <input type="text" id="title-input" name="titleInput" minlength="5" maxlength="125"
+                            placeholder="Add a title between 5 and 125 characters" (input)="onUpdateTitle($event)"
+                            #titleImputField="ngModel" required ngModel />
+                        <p class="invalid-input-paragraph" *ngIf="
+                (titleImputField.invalid &&
+                    titleImputField.touched) ||
+                !validTitle
+            ">
+                            Please enter a title between 5 and 125 characters
+                        </p>
+                    </section>
+
+                    <section id="description-section">
+                        <label for="description-input" id="description-input-label">Description</label>
+                        <textarea id="descriptionInput" name="descriptionInput" minlength="10" maxlength="5000"
+                            placeholder="Add a description between 10 and 5000 characters"
+                            (input)="onUpdateDescription($event)" #descriptionInputField="ngModel" required
+                            ngModel></textarea>
+                        <p class="invalid-input-paragraph" *ngIf="
+                (descriptionInputField.invalid &&
+                    descriptionInputField.touched) ||
+                !validDescription
+            ">
+                            Please enter a description between 10 and 5000
+                            characters
+                        </p>
+                    </section>
+                </section>
+
+                <section id="images-section" class="container-part">
+                    <label for="images-input">Images</label>
+                    <section id="image-url-section">
+                        <form id="image-url-form" #imageForm="ngForm" (ngSubmit)="
+                onSubmitImageUrl(imageForm, imageForm.value)
+            ">
+                            <input type="text" id="imagesInput" name="imageUrl" placeholder="Add up to 5 image urls"
+                                #urlInput="ngModel" (input)="onUpdateImageUrl()" required ngModel />
+                            <button type="submit" id="add-image-button" [disabled]="imageForm.invalid">
+                                Add
+                            </button>
+                            <p class="invalid-input-paragraph-images" *ngIf="!validUrl">
+                                Please enter a valid url
+                            </p>
+                            <p class="invalid-input-paragraph-images" *ngIf="maxImageAmount">
+                                Max 5 images. Please remove an image before
+                                adding one.
+                            </p>
+                        </form>
+                        <section id="images-output-section">
+                            <section class="single-image-output-section" *ngFor="
+                    let image of assignmentImageUrls;
+                    let i = index
+                ">
+                                <img [src]="image" />
+                                <button type="button" class="delete-image-button" (click)="onRemoveImage(i)">
+                                    X
+                                </button>
+                            </section>
+                        </section>
+                    </section>
+                    <button type="submit" id="create-button">Create</button>
+
+
+
+                </section>
+            </section>

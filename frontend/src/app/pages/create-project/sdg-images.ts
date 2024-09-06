@@ -1,0 +1,19 @@
+export const sdgImageUrls : string[] = [
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Sustainable_Development_Goal_01NoPoverty.svg/299px-Sustainable_Development_Goal_01NoPoverty.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Sustainable_Development_Goal_02ZeroHunger.svg/220px-Sustainable_Development_Goal_02ZeroHunger.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sustainable_Development_Goal_03GoodHealth.svg/300px-Sustainable_Development_Goal_03GoodHealth.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sustainable_Development_Goal_04QualityEducation.svg/220px-Sustainable_Development_Goal_04QualityEducation.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Sustainable_Development_Goal_05GenderEquality.svg/300px-Sustainable_Development_Goal_05GenderEquality.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sustainable_Development_Goal_6.png/300px-Sustainable_Development_Goal_6.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Sustainable_Development_Goal_07CleanEnergy.svg/300px-Sustainable_Development_Goal_07CleanEnergy.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Sustainable_Development_Goal_08DecentWork.svg/300px-Sustainable_Development_Goal_08DecentWork.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sustainable_Development_Goal_09Industry.svg/300px-Sustainable_Development_Goal_09Industry.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Sustainable_Development_Goal_10ReducedInequalities.svg/220px-Sustainable_Development_Goal_10ReducedInequalities.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sustainable_Development_Goal_11SustainableCities.svg/220px-Sustainable_Development_Goal_11SustainableCities.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Sustainable_Development_Goal_12ResponsibleConsumption.svg/300px-Sustainable_Development_Goal_12ResponsibleConsumption.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Sustainable_Development_Goal_13Climate.svg/300px-Sustainable_Development_Goal_13Climate.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Sustainable_Development_Goal_14LifeBelowWater.svg/300px-Sustainable_Development_Goal_14LifeBelowWater.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Sustainable_Development_Goal_15LifeOnLand.svg/220px-Sustainable_Development_Goal_15LifeOnLand.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sustainable_Development_Goal_16PeaceJusticeInstitutions.svg/300px-Sustainable_Development_Goal_16PeaceJusticeInstitutions.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sustainable_Development_Goal_17Partnerships.svg/220px-Sustainable_Development_Goal_17Partnerships.svg.png'
+]
